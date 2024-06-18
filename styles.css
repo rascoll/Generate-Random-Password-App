@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    background: linear-gradient(45deg, #055778, #535252, #004466, #003366);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+    color: #fff;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.container{
+    margin:12%;
+    width:90%;
+    max-width: 700px;
+}
+.display{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background: #fff;
+    color:#333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 20px;
+    border-radius: 5px;
+}
+.container h1{
+    font-weight: 500;
+    font-size: 45px;
+}
+.container h1 span{
+    color: #12cf87;
+     border-bottom: 4px solid #12cf87;
+     padding-bottom: 7px;
+}
+.display i {
+    width: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.display i:hover{
+    color: #12cf87;
+}
+.fa-copy{
+    font-size: 35px;
+}
+.display input{
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+}
+.container button i { color: aliceblue;
+    width: 28px;
+    margin-right: 10px;
+}
+.container button { color:#fff;
+    border: 0;
+    outline: 0;
+    background:#12cf87;
+    font-size: 22px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 26px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.container button:hover {
+    background: #10a26a;
+}
+.copied-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 5%;
+        margin-top: 20%;
+    }
+
+    .container h1 {
+        font-size: 36px;
+    }
+
+    .display {
+        flex-wrap: wrap;
+    }
+
+    .display input {
+        font-size: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .fa-copy {
+        font-size: 30px;
+    }
+
+    .container button {
+        font-size: 20px;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 3%;
+        margin-top: 30%;
+    }
+
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .display {
+        padding: 20px 15px;
+    }
+
+    .display input {
+        font-size: 18px;
+        width: calc(100% - 40px);
+    }
+
+    .fa-copy {
+        font-size: 25px;
+    }
+
+    .container button {
+        font-size: 18px;
+        padding: 12px 18px;
+    }
+}
